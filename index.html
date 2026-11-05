@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EML Quant Trading Competition | Application</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <header class="card hero">
+      <p class="eyebrow">Indiana University · Economic Machine Learning Lab</p>
+      <h1>EML Quant Trading Competition</h1>
+      <p class="subtitle">Spring 2027 · Application Form</p>
+      <p class="lede">Apply to participate in the EML Lab's paper-trading competition, running January 11–April 23, 2027. Open to Indiana University undergraduate and graduate students from any program.</p>
+      <div class="details">
+        <p><strong>Application deadline:</strong> Friday, December 4, 2026</p>
+        <p><strong>Participation:</strong> Individual only; teams are not permitted.</p>
+      </div>
+    </header>
+
+    <section class="card">
+      <form id="application-form" name="eml-quant-trading-application" method="POST" action="/success.html" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="eml-quant-trading-application">
+        <p class="hidden" aria-hidden="true"><label>Leave this field blank <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+        <section class="form-section" aria-labelledby="applicant-heading">
+          <h2 id="applicant-heading">1. Applicant Information</h2>
+          <div class="field-grid">
+            <label for="full-name">Full name <span class="required">*</span>
+              <input id="full-name" name="full_name" type="text" autocomplete="name" required>
+            </label>
+            <label for="email">IU email address <span class="required">*</span>
+              <input id="email" name="iu_email" type="email" autocomplete="email" placeholder="username@iu.edu" pattern="[a-zA-Z0-9._%+\-]+@(iu\.edu|[a-zA-Z0-9.\-]+\.iu\.edu)" title="Enter an IU email address (for example, username@iu.edu)." required>
+            </label>
+            <label for="program">Academic program <span class="required">*</span>
+              <input id="program" name="program" type="text" placeholder="e.g., Economics, Computer Science" required>
+            </label>
+            <label for="year">Year of study <span class="required">*</span>
+              <input id="year" name="year_of_study" type="text" placeholder="e.g., Undergraduate junior, 2nd-year PhD" required>
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section" aria-labelledby="experience-heading">
+          <h2 id="experience-heading">2. Relevant Experience</h2>
+          <label for="experience">Describe any relevant coursework, programming, or trading experience. <span class="required">*</span>
+            <textarea id="experience" name="relevant_experience" rows="6" required></textarea>
+          </label>
+        </section>
+
+        <section class="form-section" aria-labelledby="interest-heading">
+          <h2 id="interest-heading">3. Statement of Interest</h2>
+          <label for="interest">Briefly explain why you would like to participate in the competition. <span class="required">*</span>
+            <textarea id="interest" name="statement_of_interest" rows="5" required></textarea>
+          </label>
+        </section>
+
+        <section class="form-section" aria-labelledby="availability-heading">
+          <h2 id="availability-heading">4. Finalist Presentation Availability</h2>
+          <p class="section-note">If selected as one of the six finalists, you would be invited to present your work in person. Remote presentations are not available. Please indicate your availability for each date.</p>
+          <fieldset>
+            <legend>Can you present in person on Friday, April 30, 2027? <span class="required">*</span></legend>
+            <div class="radio-row">
+              <label><input type="radio" name="available_april_30" value="Yes" required> Yes</label>
+              <label><input type="radio" name="available_april_30" value="No"> No</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Can you present in person on Monday, May 3, 2027 (backup date)? <span class="required">*</span></legend>
+            <div class="radio-row">
+              <label><input type="radio" name="available_may_3" value="Yes" required> Yes</label>
+              <label><input type="radio" name="available_may_3" value="No"> No</label>
+            </div>
+          </fieldset>
+        </section>
+
+        <div class="form-footer">
+          <p class="note">Submitting an application does not guarantee selection. Applicants will be notified by mid-December 2026.</p>
+          <div id="form-error" class="error-box" role="alert" hidden></div>
+          <button id="submit-button" type="submit">Submit Application</button>
+          <p class="small-note">Questions? <a href="mailto:emllab@iu.edu">emllab@iu.edu</a></p>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
